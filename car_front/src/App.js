@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import axios from 'axios';
 
-
+import {AddCars} from './components/AddCars'
 function App() {
   const [cars, setCars] = useState(null)
  // const fetchData = async () => {
@@ -18,9 +17,10 @@ function App() {
   .then(data => {
       setCars(data);
   });
- }, [2000])
+ }, [])
   return (
     <div className="App">
+      <AddCars/>
      <div className="cars">
         {cars &&
           cars.map((car, index) => {
@@ -40,6 +40,7 @@ function App() {
             );
           })}
       </div>
+       
     </div>
   );
 }
