@@ -58,7 +58,7 @@ export const AddCars = () => {
   const handleShow = () => setShow(true);
     return (
       <>
-       <Button variant="primary" onClick={handleShow}>
+       <Button className='mt-2'variant="primary" onClick={handleShow}>
         Add Car
       </Button>
       <Modal show={show} onHide={handleClose}>
@@ -86,7 +86,7 @@ export const AddCars = () => {
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleSubmit} >
+          <Button variant="success" onClick={handleSubmit} >
             Submit
           </Button>
         </Modal.Footer>
